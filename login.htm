@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | CodingNepal</title>
+      <link rel="stylesheet" href="login.css">
+      <link rel="stylesheet" href="index.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+     <!-- ======= Navbara and logo  ======= -->
+   <body>
+      <nav class="navbar">
+         <div class="navbar-container container">
+             <h1 class="logo">CollegeInfo</h1>
+             <input type="checkbox" name="" id="">
+             <div class="hamburger-lines">
+                 <span class="line line1"></span>
+                 <span class="line line2"></span>
+                 <span class="line line3"></span>
+             </div>
+             <ul class="menu-items">
+                 <li><a href="index.htm" id="nav-links">Home</a></li>
+                 <li><a href="#study-abroad" id="nav-links">Study Aboard</a></li>
+                 <li><a href="#food" id="nav-links">Top Universities</a></li>
+                 <li><a href="#food-menu" id="nav-links">Top Colleges</a></li>
+                 <li><a href="#testimonials" id="nav-links">Contact us</a></li>
+                 <li><a href="#contact" id="nav-links">About us</a></li> 
+                 <li><a href="login.htm" class=" primary-btn">Sign In</a></li>
+                 <!-- <li><a href="login.htm" class=" secondary-btn">Sign Up</a></li> -->
+                 <li><a href="#" id="my-profile" class=" secondary-btn">My-Profile</a></li>
+                 <!-- <li><span class="material-symbols-outlined">
+                     account_circle
+                 </span></li> -->
+             </ul>
+             <a href="" id="profile-acces"><img src="/assets/profile-icon/man.png" alt="" srcset="" id="profile-acces-img"></a>
+         </div>
+         
+     </nav>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+   </body>
+</html>
